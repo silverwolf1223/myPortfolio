@@ -1,0 +1,44 @@
+p {
+    font-size: 24px;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pfp {
+    max-width: 30vw;
+    position: relative;
+}
+
+.pfp img {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.name {
+    position: absolute;
+    bottom: -20px;
+    width: 100%;
+    text-align: center;
+}
+
+.info {
+    background-color: lightblue;
+    padding: 0 10vw;
+    padding-left: 7vw;
+    max-width: 30vw;
+}
+
+@media(width < 500px) {
+    p {
+        font-size: 14px;
+    }
+    .header {
+        flex-direction: column;
+    }
+    .info {
+        max-width: 70vw;
+    }
+}
