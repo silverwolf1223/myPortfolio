@@ -1,7 +1,10 @@
+* {
+    padding: 0;
+    margin: 0;
+}
 
-
-p {
-    font-size: 24px;
+h3 {
+    padding: 0 2vw;
 }
 
 .header{
@@ -9,6 +12,7 @@ p {
     justify-content: center;
     align-items: center;
     max-width: 100%;
+    margin-bottom: 5vh;
 }
 
 .pfp {
@@ -34,19 +38,25 @@ p {
     max-width: 40vw;
 }
 
+.info p {
+    font-size: 24px;
+}
+
 .body {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(10%, 20%));
-    grid-auto-rows: minmax(200px, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(20%, 25%));
+    grid-auto-rows: 1fr;
     grid-auto-flow: row;
     max-width: 100%;
+    justify-items: space-around;
+    padding: 0 2vw;
 }
 
 .project {
     display: grid;
     justify-items: center;
     align-items: center;
-    grid-template-rows: 40% 20% 40%;
+    grid-template-rows: repeat(3, clamp(10%, 10%, 1fr));
     border: 2px solid black;
     max-width: 20vw;
     min-height: 200px;
@@ -54,7 +64,7 @@ p {
 }
 
 .project img {
-    max-width: 100%;
+    max-width: 70%;
     max-height: 100%;
 }
 
@@ -65,12 +75,17 @@ p {
 }
 
 .projectLine img {
-    width: 100%;
+    width: 75%;
 }
 
 .projectLine a{
     width: 100%;
     display: flex;
+}
+
+.project p {
+    overflow: auto;
+    max-height: 100%;
 }
 
 
@@ -99,10 +114,23 @@ p {
     }
 
     .body {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(10%, 20%));
-    grid-auto-rows: minmax(200px, 1fr);
-    grid-auto-flow: row;
-    max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(30%, 50%));
+        grid-auto-rows: minmax(200px, 1fr);
+        grid-auto-flow: row;
+        max-width: 100%;
+    }
+
+    .project {
+        max-width: 100%;
+    }
+
+    .projectLine a {
+        width: 100%;
+        grid-row: 2;
+    }
+
+    .projectLine h4 {
+        grid-column: span 2;
     }
 }
